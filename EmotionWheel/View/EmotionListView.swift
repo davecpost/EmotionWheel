@@ -7,11 +7,13 @@
 
 import SwiftUI
 
-struct BaseEmotionListView: View {
+struct EmotionListView: View {
+    var emotions: [Emotion]
+    @State var showRecordEmotionView = false
     var body: some View {
         NavigationView {
             List {
-                ForEach(emotionWheel) { emotion in
+                ForEach(emotions) { emotion in
                     EmotionRow(emotion: emotion)
                     .listRowBackground(emotion.color)
                 }
@@ -23,6 +25,6 @@ struct BaseEmotionListView: View {
 
 struct BaseEmotionListView_Previews: PreviewProvider {
     static var previews: some View {
-        BaseEmotionListView()
+        EmotionListView(emotions: emotionWheel)
     }
 }

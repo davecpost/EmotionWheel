@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            BaseEmotionListView()
+            EmotionListView(emotions: emotionWheel)
                 .tabItem {
                     Image(systemName: "plus")
                     Text("Add")

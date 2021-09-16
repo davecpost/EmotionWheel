@@ -16,9 +16,16 @@ struct EmotionRow: View {
             Text("\(emotion.name)")
                 .fontWeight(.bold)
             Spacer()
-            Image(systemName: "plus")
-                .font(.system(size: 40))
-            Image(systemName: "chevron.forward.circle")
+            Button {
+                
+            } label: {
+                Image(systemName: "plus")
+            }
+            Button {
+            } label: {
+                Image(systemName: "chevron.forward.circle")
+            }
+            
         }
         .font(.system(size: 40))
     }
