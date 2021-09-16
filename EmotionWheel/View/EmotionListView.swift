@@ -11,12 +11,12 @@ struct EmotionListView: View {
     var emotions: [Emotion]
     var body: some View {
         NavigationView {
-            VStack {
+            ScrollView {
                 ForEach(emotions) { emotion in
                     EmotionRow(emotion: emotion)
                 }
+                .navigationTitle("Emotions")
             }
-            .navigationTitle("Emotions")
         }
     }
 }
