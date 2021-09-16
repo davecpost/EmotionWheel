@@ -9,7 +9,15 @@ import SwiftUI
 
 struct BaseEmotionListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                ForEach(emotionWheel) { emotion in
+                    EmotionRow(emotion: emotion)
+                    .listRowBackground(emotion.color)
+                }
+            }
+            .navigationTitle("Emotions")
+        }
     }
 }
 

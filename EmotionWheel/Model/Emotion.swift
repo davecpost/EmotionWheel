@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Emotion {
+struct Emotion: Identifiable {
+    let id = UUID()
     var name: String
     var color: Color? = nil
     var subEmotions: [Emotion] = []

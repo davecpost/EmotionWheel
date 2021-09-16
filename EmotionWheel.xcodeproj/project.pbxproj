@@ -19,6 +19,7 @@
 		7D99F12A26F3A7570082B398 /* BaseEmotionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F12926F3A7570082B398 /* BaseEmotionListView.swift */; };
 		7D99F12C26F3A7610082B398 /* EmotionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F12B26F3A7610082B398 /* EmotionHistoryView.swift */; };
 		7D99F12E26F3A88A0082B398 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F12D26F3A88A0082B398 /* Emotion.swift */; };
+		7D99F13026F3AFBE0082B398 /* EmotionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F12F26F3AFBE0082B398 /* EmotionRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		7D99F12926F3A7570082B398 /* BaseEmotionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEmotionListView.swift; sourceTree = "<group>"; };
 		7D99F12B26F3A7610082B398 /* EmotionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionHistoryView.swift; sourceTree = "<group>"; };
 		7D99F12D26F3A88A0082B398 /* Emotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
+		7D99F12F26F3AFBE0082B398 /* EmotionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,17 +109,13 @@
 		7D99EABC26E67E800082B398 /* EmotionWheel */ = {
 			isa = PBXGroup;
 			children = (
+				7D99F13226F3AFD70082B398 /* View */,
+				7D99F13126F3AFD00082B398 /* Model */,
 				7D99EABD26E67E800082B398 /* EmotionWheelApp.swift */,
 				7D99EABF26E67E800082B398 /* ContentView.swift */,
 				7D99EAC126E67E850082B398 /* Assets.xcassets */,
 				7D99EAC626E67E850082B398 /* Info.plist */,
 				7D99EAC326E67E850082B398 /* Preview Content */,
-				7D99EAE826E67EB90082B398 /* SegmentedWheel.swift */,
-				7D99EAEA26E68C7E0082B398 /* CircleSegment.swift */,
-				7D99EAEE26E7F3050082B398 /* LabledCircleSegmentView.swift */,
-				7D99F12926F3A7570082B398 /* BaseEmotionListView.swift */,
-				7D99F12B26F3A7610082B398 /* EmotionHistoryView.swift */,
-				7D99F12D26F3A88A0082B398 /* Emotion.swift */,
 			);
 			path = EmotionWheel;
 			sourceTree = "<group>";
@@ -146,6 +144,35 @@
 				7D99EADC26E67E860082B398 /* Info.plist */,
 			);
 			path = EmotionWheelUITests;
+			sourceTree = "<group>";
+		};
+		7D99F13126F3AFD00082B398 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D99F12D26F3A88A0082B398 /* Emotion.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D99F13226F3AFD70082B398 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D99F12B26F3A7610082B398 /* EmotionHistoryView.swift */,
+				7D99F12F26F3AFBE0082B398 /* EmotionRow.swift */,
+				7D99F12926F3A7570082B398 /* BaseEmotionListView.swift */,
+				7D99F13326F3AFE20082B398 /* Circle */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D99F13326F3AFE20082B398 /* Circle */ = {
+			isa = PBXGroup;
+			children = (
+				7D99EAE826E67EB90082B398 /* SegmentedWheel.swift */,
+				7D99EAEE26E7F3050082B398 /* LabledCircleSegmentView.swift */,
+				7D99EAEA26E68C7E0082B398 /* CircleSegment.swift */,
+			);
+			path = Circle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +306,7 @@
 			files = (
 				7D99EAC026E67E800082B398 /* ContentView.swift in Sources */,
 				7D99F12A26F3A7570082B398 /* BaseEmotionListView.swift in Sources */,
+				7D99F13026F3AFBE0082B398 /* EmotionRow.swift in Sources */,
 				7D99EABE26E67E800082B398 /* EmotionWheelApp.swift in Sources */,
 				7D99F12E26F3A88A0082B398 /* Emotion.swift in Sources */,
 				7D99EAE926E67EB90082B398 /* SegmentedWheel.swift in Sources */,
