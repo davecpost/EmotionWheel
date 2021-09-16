@@ -9,9 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            BaseEmotionListView()
+                .tabItem {
+                    Image(systemName: "plus")
+                    Text("Add")
+                }
+            EmotionHistoryView()
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    Text("History")
+                }
+        }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

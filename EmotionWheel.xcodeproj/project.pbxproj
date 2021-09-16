@@ -16,6 +16,8 @@
 		7D99EAE926E67EB90082B398 /* SegmentedWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99EAE826E67EB90082B398 /* SegmentedWheel.swift */; };
 		7D99EAEB26E68C7E0082B398 /* CircleSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99EAEA26E68C7E0082B398 /* CircleSegment.swift */; };
 		7D99EAEF26E7F3050082B398 /* LabledCircleSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99EAEE26E7F3050082B398 /* LabledCircleSegmentView.swift */; };
+		7D99F12A26F3A7570082B398 /* BaseEmotionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F12926F3A7570082B398 /* BaseEmotionListView.swift */; };
+		7D99F12C26F3A7610082B398 /* EmotionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F12B26F3A7610082B398 /* EmotionHistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		7D99EAE826E67EB90082B398 /* SegmentedWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedWheel.swift; sourceTree = "<group>"; };
 		7D99EAEA26E68C7E0082B398 /* CircleSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSegment.swift; sourceTree = "<group>"; };
 		7D99EAEE26E7F3050082B398 /* LabledCircleSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabledCircleSegmentView.swift; sourceTree = "<group>"; };
+		7D99F12926F3A7570082B398 /* BaseEmotionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEmotionListView.swift; sourceTree = "<group>"; };
+		7D99F12B26F3A7610082B398 /* EmotionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionHistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				7D99EAE826E67EB90082B398 /* SegmentedWheel.swift */,
 				7D99EAEA26E68C7E0082B398 /* CircleSegment.swift */,
 				7D99EAEE26E7F3050082B398 /* LabledCircleSegmentView.swift */,
+				7D99F12926F3A7570082B398 /* BaseEmotionListView.swift */,
+				7D99F12B26F3A7610082B398 /* EmotionHistoryView.swift */,
 			);
 			path = EmotionWheel;
 			sourceTree = "<group>";
@@ -269,8 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D99EAC026E67E800082B398 /* ContentView.swift in Sources */,
+				7D99F12A26F3A7570082B398 /* BaseEmotionListView.swift in Sources */,
 				7D99EABE26E67E800082B398 /* EmotionWheelApp.swift in Sources */,
 				7D99EAE926E67EB90082B398 /* SegmentedWheel.swift in Sources */,
+				7D99F12C26F3A7610082B398 /* EmotionHistoryView.swift in Sources */,
 				7D99EAEB26E68C7E0082B398 /* CircleSegment.swift in Sources */,
 				7D99EAEF26E7F3050082B398 /* LabledCircleSegmentView.swift in Sources */,
 			);
