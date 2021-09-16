@@ -9,13 +9,11 @@ import SwiftUI
 
 struct EmotionListView: View {
     var emotions: [Emotion]
-    @State var showRecordEmotionView = false
     var body: some View {
         NavigationView {
-            List {
+            VStack {
                 ForEach(emotions) { emotion in
                     EmotionRow(emotion: emotion)
-                    .listRowBackground(emotion.color)
                 }
             }
             .navigationTitle("Emotions")

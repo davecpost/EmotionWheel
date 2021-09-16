@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct RecordEmotionView: View {
+    var emotion: Emotion
     @Binding var showSheet: Bool
     @State private var description: String = ""
     @State private var intensity: Double = 0
-    var emotion: Emotion
     var body: some View {
         Form {
             Section(header: Text("Description")) {
@@ -28,15 +28,11 @@ struct RecordEmotionView: View {
                 Text("Confirm")
             }
         }
-        .navigationTitle("\(emotion.name)")
-        .navigationBarItems(trailing: Button("Cancel") {
-            showSheet = false
-        })
     }
 }
 
 struct RecordEmotionView_Previews: PreviewProvider {
     static var previews: some View {
-        RecordEmotionView(showSheet: .constant(true), emotion: Emotion(name: "Happy", color: Color.yellow))
+        RecordEmotionView(emotion: Emotion(name: "Happy", color: Color.yellow), showSheet: .constant(true))
     }
 }

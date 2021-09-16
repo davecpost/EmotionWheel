@@ -11,23 +11,30 @@ import SwiftUI
 
 struct EmotionRow: View {
     var emotion: Emotion
+    @State private var showSheet: Bool = false
     var body: some View {
         HStack {
             Text("\(emotion.name)")
                 .fontWeight(.bold)
+                .font(.system(size: 40))
             Spacer()
             Button {
-                
+                showSheet = true
             } label: {
                 Image(systemName: "plus")
-            }
+                    .font(.system(size: 40))
+                    .foregroundColor(.black)
+            }.sheet(isPresented: $showSheet, content: {
+                RecordEmotionView(emotion: emotion, showSheet: $showSheet)
+            })
             Button {
             } label: {
                 Image(systemName: "chevron.forward.circle")
+                    .font(.system(size: 40))
+                    .foregroundColor(.black)
             }
-            
         }
-        .font(.system(size: 40))
+        .background(emotion.color)
     }
 }
 
