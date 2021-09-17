@@ -22,6 +22,8 @@
 		7D99F13026F3AFBE0082B398 /* EmotionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F12F26F3AFBE0082B398 /* EmotionRow.swift */; };
 		7D99F13526F3B35F0082B398 /* RecordEmotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F13426F3B35F0082B398 /* RecordEmotionView.swift */; };
 		7D99F13926F4F0BB0082B398 /* EmotionTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F13826F4F0BB0082B398 /* EmotionTabView.swift */; };
+		7D99F13C26F50AA60082B398 /* EmotionsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F13A26F50AA60082B398 /* EmotionsModel.xcdatamodeld */; };
+		7D99F13E26F50ACD0082B398 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F13D26F50ACD0082B398 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		7D99F12F26F3AFBE0082B398 /* EmotionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionRow.swift; sourceTree = "<group>"; };
 		7D99F13426F3B35F0082B398 /* RecordEmotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEmotionView.swift; sourceTree = "<group>"; };
 		7D99F13826F4F0BB0082B398 /* EmotionTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionTabView.swift; sourceTree = "<group>"; };
+		7D99F13B26F50AA60082B398 /* EmotionsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmotionsModel.xcdatamodel; sourceTree = "<group>"; };
+		7D99F13D26F50ACD0082B398 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				7D99F12D26F3A88A0082B398 /* Emotion.swift */,
+				7D99F13A26F50AA60082B398 /* EmotionsModel.xcdatamodeld */,
+				7D99F13D26F50ACD0082B398 /* CoreDataStack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,9 +322,11 @@
 				7D99F13026F3AFBE0082B398 /* EmotionRow.swift in Sources */,
 				7D99F13526F3B35F0082B398 /* RecordEmotionView.swift in Sources */,
 				7D99EABE26E67E800082B398 /* EmotionWheelApp.swift in Sources */,
+				7D99F13E26F50ACD0082B398 /* CoreDataStack.swift in Sources */,
 				7D99F12E26F3A88A0082B398 /* Emotion.swift in Sources */,
 				7D99EAE926E67EB90082B398 /* SegmentedWheel.swift in Sources */,
 				7D99F12C26F3A7610082B398 /* EmotionHistoryView.swift in Sources */,
+				7D99F13C26F50AA60082B398 /* EmotionsModel.xcdatamodeld in Sources */,
 				7D99EAEB26E68C7E0082B398 /* CircleSegment.swift in Sources */,
 				7D99EAEF26E7F3050082B398 /* LabledCircleSegmentView.swift in Sources */,
 			);
@@ -640,6 +648,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7D99F13A26F50AA60082B398 /* EmotionsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7D99F13B26F50AA60082B398 /* EmotionsModel.xcdatamodel */,
+			);
+			currentVersion = 7D99F13B26F50AA60082B398 /* EmotionsModel.xcdatamodel */;
+			path = EmotionsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7D99EAB226E67E800082B398 /* Project object */;
 }
