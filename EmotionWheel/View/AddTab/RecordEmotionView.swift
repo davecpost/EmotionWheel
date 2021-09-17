@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct RecordEmotionView: View {
     var emotion: Emotion
     @State private var description: String = ""
     @State private var intensity: Double = 0
+    @Environment(\.managedObjectContext) var managedObjectContext: NSManagedObjectContext
     var body: some View {
         Form {
             Section(header: Text("Description")) {
@@ -22,7 +24,7 @@ struct RecordEmotionView: View {
                 Slider(value: $intensity)
             }
             Button {
-                
+                EmotionRecord.insert(in: managedObjectContext, name: emotion.name, note: description, intensity: intensity)
             } label: {
                 Text("Confirm")
             }
