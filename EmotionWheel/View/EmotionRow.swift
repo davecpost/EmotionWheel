@@ -11,7 +11,9 @@ import SwiftUI
 
 struct EmotionRow: View {
     var emotion: Emotion
-    @State private var showSheet: Bool = false
+    @Binding var showEmotionDetail: Bool
+    @Binding var selectedEmotion: Emotion?
+    @State private var showAddSheet: Bool = false
     var body: some View {
         HStack {
             Text("\(emotion.name)")
@@ -19,23 +21,27 @@ struct EmotionRow: View {
                 .font(.system(size: 40))
             Spacer()
             Button {
-                showSheet = true
+                showAddSheet = true
             } label: {
                 Image(systemName: "plus")
                     .font(.system(size: 40))
                     .foregroundColor(.black)
-            }.sheet(isPresented: $showSheet, content: {
+            }.sheet(isPresented: $showAddSheet, content: {
                 NavigationView {
                     RecordEmotionView(emotion: emotion)
                         .navigationTitle(emotion.name)
-                        .navigationBarItems(trailing: Button("Cancel") { showSheet = false})
+                        .navigationBarItems(trailing: Button("Cancel") { showAddSheet = false })
                 }
             })
-            Button {
-            } label: {
-                Image(systemName: "chevron.forward.circle")
-                    .font(.system(size: 40))
-                    .foregroundColor(.black)
+            if(emotion.subEmotions.count > 0) {
+                Button(action: {
+                    selectedEmotion = emotion
+                    showEmotionDetail = true
+                }, label: {
+                    Image(systemName: "chevron.forward.circle")
+                        .font(.system(size: 40))
+                        .foregroundColor(.black)
+                })
             }
         }
         .background(emotion.color)
@@ -44,6 +50,6 @@ struct EmotionRow: View {
 
 struct EmotionRow_Previews: PreviewProvider {
     static var previews: some View {
-        EmotionRow(emotion: Emotion(name: "Happy", color: Color.yellow))
+        EmotionRow(emotion: Emotion(name: "Happy", color: Color.yellow, subEmotions: [Emotion(name: "joy", color: Color.yellow)]), showEmotionDetail: .constant(false), selectedEmotion: .constant(nil))
     }
 }

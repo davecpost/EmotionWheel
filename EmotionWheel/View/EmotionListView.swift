@@ -9,13 +9,16 @@ import SwiftUI
 
 struct EmotionListView: View {
     var emotions: [Emotion]
+    @State private var selectedEmotion: Emotion? = nil
+    @State private var showEmotionDetail: Bool = false
     var body: some View {
-        NavigationView {
-            ScrollView {
-                ForEach(emotions) { emotion in
-                    EmotionRow(emotion: emotion)
-                }
-                .navigationTitle("Emotions")
+        ScrollView {
+            ForEach(emotions) { emotion in
+                EmotionRow(emotion: emotion, showEmotionDetail: $showEmotionDetail, selectedEmotion: $selectedEmotion)
+            }
+            if let subEmotions = selectedEmotion?.subEmotions {
+                NavigationLink("", destination: EmotionListView(emotions: subEmotions).navigationTitle(selectedEmotion?.name ?? "Emotions"), isActive: $showEmotionDetail)
+                    
             }
         }
     }

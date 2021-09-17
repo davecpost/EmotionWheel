@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            EmotionListView(emotions: emotionWheel)
+            EmotionTabView()
                 .tabItem {
                     Image(systemName: "plus")
                     Text("Add")
@@ -22,7 +22,6 @@ struct ContentView: View {
                 }
         }
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {

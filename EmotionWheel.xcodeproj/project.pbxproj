@@ -21,6 +21,7 @@
 		7D99F12E26F3A88A0082B398 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F12D26F3A88A0082B398 /* Emotion.swift */; };
 		7D99F13026F3AFBE0082B398 /* EmotionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F12F26F3AFBE0082B398 /* EmotionRow.swift */; };
 		7D99F13526F3B35F0082B398 /* RecordEmotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F13426F3B35F0082B398 /* RecordEmotionView.swift */; };
+		7D99F13926F4F0BB0082B398 /* EmotionTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F13826F4F0BB0082B398 /* EmotionTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		7D99F12D26F3A88A0082B398 /* Emotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
 		7D99F12F26F3AFBE0082B398 /* EmotionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionRow.swift; sourceTree = "<group>"; };
 		7D99F13426F3B35F0082B398 /* RecordEmotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEmotionView.swift; sourceTree = "<group>"; };
+		7D99F13826F4F0BB0082B398 /* EmotionTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				7D99F12926F3A7570082B398 /* EmotionListView.swift */,
 				7D99F13426F3B35F0082B398 /* RecordEmotionView.swift */,
 				7D99F13326F3AFE20082B398 /* Circle */,
+				7D99F13826F4F0BB0082B398 /* EmotionTabView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D99F13926F4F0BB0082B398 /* EmotionTabView.swift in Sources */,
 				7D99EAC026E67E800082B398 /* ContentView.swift in Sources */,
 				7D99F12A26F3A7570082B398 /* EmotionListView.swift in Sources */,
 				7D99F13026F3AFBE0082B398 /* EmotionRow.swift in Sources */,
