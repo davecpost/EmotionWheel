@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RecordEmotionView: View {
     var emotion: Emotion
-    @Binding var showSheet: Bool
     @State private var description: String = ""
     @State private var intensity: Double = 0
     var body: some View {
@@ -33,6 +32,6 @@ struct RecordEmotionView: View {
 
 struct RecordEmotionView_Previews: PreviewProvider {
     static var previews: some View {
-        RecordEmotionView(emotion: Emotion(name: "Happy", color: Color.yellow), showSheet: .constant(true))
+        RecordEmotionView(emotion: Emotion(name: "Happy", color: Color.yellow))
     }
 }

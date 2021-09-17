@@ -25,7 +25,11 @@ struct EmotionRow: View {
                     .font(.system(size: 40))
                     .foregroundColor(.black)
             }.sheet(isPresented: $showSheet, content: {
-                RecordEmotionView(emotion: emotion, showSheet: $showSheet)
+                NavigationView {
+                    RecordEmotionView(emotion: emotion)
+                        .navigationTitle(emotion.name)
+                        .navigationBarItems(trailing: Button("Cancel") { showSheet = false})
+                }
             })
             Button {
             } label: {
