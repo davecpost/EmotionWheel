@@ -10,6 +10,7 @@ import CoreData
 
 struct RecordEmotionView: View {
     var emotion: Emotion
+    @Binding var showAddSheet: Bool
     @State private var description: String = ""
     @State private var intensity: Double = 0
     @Environment(\.managedObjectContext) var managedObjectContext: NSManagedObjectContext
@@ -25,6 +26,8 @@ struct RecordEmotionView: View {
             }
             Button {
                 EmotionRecord.insert(in: managedObjectContext, name: emotion.name, note: description, intensity: intensity)
+                try! managedObjectContext.save()
+                showAddSheet = false
             } label: {
                 Text("Confirm")
             }
@@ -34,6 +37,6 @@ struct RecordEmotionView: View {
 
 struct RecordEmotionView_Previews: PreviewProvider {
     static var previews: some View {
-        RecordEmotionView(emotion: Emotion(name: "Happy", color: Color.yellow))
+        RecordEmotionView(emotion: Emotion(name: "Happy", color: Color.yellow), showAddSheet: .constant(true))
     }
 }

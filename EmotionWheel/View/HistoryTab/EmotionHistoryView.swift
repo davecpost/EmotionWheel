@@ -6,15 +6,31 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct EmotionHistoryView: View {
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \EmotionRecord.timestamp, ascending: true)]) var emotionRecords: FetchedResults<EmotionRecord>
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(emotionRecords) { record in
+            VStack {
+                HStack {
+                    Text("\(record.name ?? "-")")
+                    Spacer()
+                    Text("\(record.dateString() ?? "-")")
+                }
+                HStack {
+                    Text("Intensity: \(record.intensityString())")
+                }
+                HStack {
+                    Text("\(record.note ?? "-")")
+                }
+            }
+        }
     }
 }
 
 struct EmotionHistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        EmotionHistoryView()
+        EmotionHistoryView().environment(\.managedObjectContext, CoreDataStack.preview.managedObjectContext)
     }
 }

@@ -28,7 +28,7 @@ struct EmotionRow: View {
                     .foregroundColor(.black)
             }.sheet(isPresented: $showAddSheet, content: {
                 NavigationView {
-                    RecordEmotionView(emotion: emotion)
+                    RecordEmotionView(emotion: emotion, showAddSheet: $showAddSheet)
                         .navigationTitle(emotion.name)
                         .navigationBarItems(trailing: Button("Cancel") { showAddSheet = false })
                 }

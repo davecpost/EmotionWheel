@@ -8,7 +8,7 @@
 import SwiftUI
 @main
 struct EmotionWheelApp: App {
-    private let coreDataStack = CoreDataStack(modelName: "EmotionsModel")
+    private let coreDataStack = CoreDataStack()
     var body: some Scene {
         WindowGroup {
             ContentView()

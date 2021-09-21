@@ -8,21 +8,23 @@
 import Foundation
 import CoreData
 
-class CoreDataStack {
+class CoreDataStack: ObservableObject {
     private let persistentContainer: NSPersistentContainer
     var managedObjectContext: NSManagedObjectContext {
         persistentContainer.viewContext
     }
-    init(modelName: String) {
-        persistentContainer = {
-            let container = NSPersistentContainer(name: modelName)
-            container.loadPersistentStores(completionHandler: { description, error in
-                if let error = error {
-                    print(error)
-                }
-            })
-            return container
-        }()
+    init(inMemory: Bool = false) {
+        persistentContainer = NSPersistentContainer(name: "EmotionsModel")
+        
+        if inMemory {
+            persistentContainer.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+        }
+        
+        persistentContainer.loadPersistentStores(completionHandler: { description, error in
+            if let error = error {
+                print(error)
+            }
+        })
     }
     
     func save() {
@@ -33,4 +35,11 @@ class CoreDataStack {
             print(error)
         }
     }
+    
+    static var preview: CoreDataStack = {
+        let coreDataStack = CoreDataStack(inMemory: true)
+        EmotionRecord.insert(in: coreDataStack.managedObjectContext, name: "Happy", note: "I am happy", intensity: 0.7)
+        coreDataStack.save()
+        return coreDataStack
+    }()
 }
