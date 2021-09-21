@@ -26,7 +26,6 @@ struct RecordEmotionView: View {
             }
             Button {
                 EmotionRecord.insert(in: managedObjectContext, name: emotion.name, note: description, intensity: intensity)
-                try! managedObjectContext.save()
                 showAddSheet = false
             } label: {
                 Text("Confirm")
