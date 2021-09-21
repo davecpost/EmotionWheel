@@ -25,6 +25,8 @@
 		7D99F13E26F50ACD0082B398 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F13D26F50ACD0082B398 /* CoreDataStack.swift */; };
 		7D99F14426F50F310082B398 /* EmotionRecordExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F14326F50F310082B398 /* EmotionRecordExtension.swift */; };
 		7DBCEB8226FA44BB003FBDD5 /* EmotionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBCEB8126FA44BB003FBDD5 /* EmotionsTest.swift */; };
+		7DBCEB8426FA6440003FBDD5 /* EmotionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBCEB8326FA6440003FBDD5 /* EmotionDetailView.swift */; };
+		7DBCEB8626FA68AF003FBDD5 /* EmotionHistoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBCEB8526FA68AF003FBDD5 /* EmotionHistoryListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		7D99F13D26F50ACD0082B398 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		7D99F14326F50F310082B398 /* EmotionRecordExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionRecordExtension.swift; sourceTree = "<group>"; };
 		7DBCEB8126FA44BB003FBDD5 /* EmotionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsTest.swift; sourceTree = "<group>"; };
+		7DBCEB8326FA6440003FBDD5 /* EmotionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionDetailView.swift; sourceTree = "<group>"; };
+		7DBCEB8526FA68AF003FBDD5 /* EmotionHistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionHistoryListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				7D99F12B26F3A7610082B398 /* EmotionHistoryView.swift */,
+				7DBCEB8326FA6440003FBDD5 /* EmotionDetailView.swift */,
+				7DBCEB8526FA68AF003FBDD5 /* EmotionHistoryListView.swift */,
 			);
 			path = HistoryTab;
 			sourceTree = "<group>";
@@ -341,10 +347,12 @@
 				7D99F13026F3AFBE0082B398 /* EmotionRow.swift in Sources */,
 				7D99F14426F50F310082B398 /* EmotionRecordExtension.swift in Sources */,
 				7D99F13526F3B35F0082B398 /* RecordEmotionView.swift in Sources */,
+				7DBCEB8426FA6440003FBDD5 /* EmotionDetailView.swift in Sources */,
 				7D99EABE26E67E800082B398 /* EmotionWheelApp.swift in Sources */,
 				7D99F13E26F50ACD0082B398 /* CoreDataStack.swift in Sources */,
 				7D99F12E26F3A88A0082B398 /* Emotion.swift in Sources */,
 				7D99EAE926E67EB90082B398 /* SegmentedWheel.swift in Sources */,
+				7DBCEB8626FA68AF003FBDD5 /* EmotionHistoryListView.swift in Sources */,
 				7D99F12C26F3A7610082B398 /* EmotionHistoryView.swift in Sources */,
 				7D99F13C26F50AA60082B398 /* EmotionsModel.xcdatamodeld in Sources */,
 				7D99EAEB26E68C7E0082B398 /* CircleSegment.swift in Sources */,

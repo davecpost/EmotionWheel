@@ -17,10 +17,10 @@ extension EmotionRecord {
         record.timestamp = Date()
     }
     
-    static func preview() -> EmotionRecord {
-        let record: EmotionRecord = EmotionRecord()
+    static func preview(in context: NSManagedObjectContext) -> EmotionRecord {
+        let record: EmotionRecord = EmotionRecord(context: context)
         record.intensity = 0.5
-        record.name = "happy"
+        record.name = "Joy"
         record.note = "I am happy"
         record.timestamp = Date()
         return record

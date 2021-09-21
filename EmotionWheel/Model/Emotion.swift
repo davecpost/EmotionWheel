@@ -24,13 +24,13 @@ struct Emotion: Identifiable {
             Emotion(name: "Threatened", color: Color.purple),
             Emotion(name: "Helpless", color: Color.purple),
         ]),
-        Emotion(name: "Embarrased", color: Color.pink, subEmotions: [
-            Emotion(name: "Disrespected", color: Color.pink),
-            Emotion(name: "Worthless", color: Color.pink),
-            Emotion(name: "Guilty", color: Color.pink),
-            Emotion(name: "Sheepish", color: Color.pink),
-            Emotion(name: "Ashamed", color: Color.pink),
-            Emotion(name: "Inferior", color: Color.pink),
+        Emotion(name: "Embarrased", color: Color.red, subEmotions: [
+            Emotion(name: "Disrespected", color: Color.red),
+            Emotion(name: "Worthless", color: Color.red),
+            Emotion(name: "Guilty", color: Color.red),
+            Emotion(name: "Sheepish", color: Color.red),
+            Emotion(name: "Ashamed", color: Color.red),
+            Emotion(name: "Inferior", color: Color.red),
         ]),
         Emotion(name: "Angry", color: Color.orange, subEmotions: [
             Emotion(name: "Offended", color: Color.orange),
@@ -42,14 +42,6 @@ struct Emotion: Identifiable {
             Emotion(name: "Harassed", color: Color.orange),
             Emotion(name: "Bored", color: Color.orange),
             Emotion(name: "Rushed", color: Color.orange),
-        ]),
-        Emotion(name: "Alone", color: Color.yellow, subEmotions: [
-            Emotion(name: "Distant", color: Color.yellow),
-            Emotion(name: "Lonely", color: Color.yellow),
-            Emotion(name: "Excluded", color: Color.yellow),
-            Emotion(name: "Fragile", color: Color.yellow),
-            Emotion(name: "Abandoned", color: Color.yellow),
-            Emotion(name: "Desolate", color: Color.yellow),
         ]),
         Emotion(name: "Dislike", color: Color.green, subEmotions: [
             Emotion(name: "Dismissive", color: Color.green),
@@ -67,10 +59,30 @@ struct Emotion: Identifiable {
             Emotion(name: "Subdued", color: Color.blue),
             Emotion(name: "Aggrieved", color: Color.blue),
             Emotion(name: "Discouraged", color: Color.blue),
+        ]),
+        Emotion(name: "Love", color: Color.pink, subEmotions: [
+            Emotion(name: "Peaceful", color: Color.pink),
+            Emotion(name: "Tenderness", color: Color.pink),
+            Emotion(name: "Desire", color: Color.pink),
+            Emotion(name: "Longing", color: Color.pink),
+            Emotion(name: "Affectionate", color: Color.pink),
+        ]),
+        Emotion(name: "Joy", color: Color.yellow, subEmotions: [
+            Emotion(name: "Enthralled", color: Color.yellow),
+            Emotion(name: "Elation", color: Color.yellow),
+            Emotion(name: "Enthusiastic", color: Color.yellow),
+            Emotion(name: "Optimistic", color: Color.yellow),
+            Emotion(name: "Proud", color: Color.yellow),
+            Emotion(name: "Cheerful", color: Color.yellow),
+            Emotion(name: "Happy", color: Color.yellow),
+            Emotion(name: "Content", color: Color.yellow),
         ])
     ]
     
-    static func getColor(for name: String) -> Color? {
+    static func getColor(for name: String?) -> Color {
+        guard let name = name else {
+            return Color.white
+        }
         for emotion in Emotion.emotions {
             if emotion.name == name {
                 return emotion.color
@@ -78,7 +90,7 @@ struct Emotion: Identifiable {
                 return found.color
             }
         }
-        return nil
+        return Color.white
     }
     
     private static func searchForSubEmotion(named name: String, in emotion: Emotion) -> Emotion? {

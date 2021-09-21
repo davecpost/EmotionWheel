@@ -24,7 +24,8 @@ class EmotionTests: XCTestCase {
     func testEmotionColor() throws {
         XCTAssertEqual(Emotion.getColor(for: "Sad"), Color.blue)
         XCTAssertEqual(Emotion.getColor(for: "Worried"), Color.purple)
-        XCTAssertEqual(Emotion.getColor(for: "blah"), nil)
+        XCTAssertEqual(Emotion.getColor(for: "blah"), Color.white)
+        XCTAssertEqual(Emotion.getColor(for: nil), Color.white)
         
     }
 }

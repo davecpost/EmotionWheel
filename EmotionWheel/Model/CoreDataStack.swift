@@ -38,7 +38,9 @@ class CoreDataStack: ObservableObject {
     
     static var preview: CoreDataStack = {
         let coreDataStack = CoreDataStack(inMemory: true)
-        EmotionRecord.insert(in: coreDataStack.managedObjectContext, name: "Happy", note: "I am happy", intensity: 0.7)
+        EmotionRecord.insert(in: coreDataStack.managedObjectContext, name: "Joy", note: "I am happy", intensity: 0.7)
+        EmotionRecord.insert(in: coreDataStack.managedObjectContext, name: "Angry", note: "I am angry", intensity: 0.3)
+        EmotionRecord.insert(in: coreDataStack.managedObjectContext, name: "Tenderness", note: "I am tender", intensity: 0.4)
         coreDataStack.save()
         return coreDataStack
     }()

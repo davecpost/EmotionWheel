@@ -9,24 +9,15 @@ import SwiftUI
 import CoreData
 
 struct EmotionHistoryView: View {
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \EmotionRecord.timestamp, ascending: true)]) var emotionRecords: FetchedResults<EmotionRecord>
+    @Namespace var animation
+    @State private var selectedRecord: EmotionRecord!
+    @State private var showDetail: Bool = false
+    
     var body: some View {
-        List(emotionRecords) { record in
-            ScrollView {
-                ZStack {
-                    Capsule()
-                HStack {
-                    Text("\(record.name ?? "-")")
-                    Spacer()
-                    Text("\(record.dateString() ?? "-")")
-                }
-                HStack {
-                    Text("Intensity: \(record.intensityString())")
-                }
-                HStack {
-                    Text("\(record.note ?? "-")")
-                }
-                }
+        ZStack {
+            EmotionHistoryListView(animation: animation, selectedRecord: $selectedRecord, showDetail: $showDetail)
+            if showDetail {
+                EmotionDetailView(selectedRecord: $selectedRecord, showDetail: $showDetail, animation: animation)
             }
         }
     }
