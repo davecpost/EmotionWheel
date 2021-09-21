@@ -26,6 +26,6 @@ struct EmotionListView: View {
 
 struct BaseEmotionListView_Previews: PreviewProvider {
     static var previews: some View {
-        EmotionListView(emotions: emotionWheel)
+        EmotionListView(emotions: Emotion.emotions)
     }
 }

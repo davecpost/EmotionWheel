@@ -10,7 +10,7 @@ import SwiftUI
 struct EmotionTabView: View {
     var body: some View {
         NavigationView {
-            EmotionListView(emotions: emotionWheel)
+            EmotionListView(emotions: Emotion.emotions)
                 .navigationTitle("Emotions")
         }
     }

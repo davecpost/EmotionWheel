@@ -24,7 +24,7 @@ struct EmotionRow: View {
                 showAddSheet = true
             } label: {
                 Image(systemName: "plus")
-                    .font(.system(size: 40))
+                    .font(.system(.largeTitle))
                     .foregroundColor(.black)
             }.sheet(isPresented: $showAddSheet, content: {
                 NavigationView {

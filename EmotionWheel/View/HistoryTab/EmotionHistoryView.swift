@@ -12,7 +12,9 @@ struct EmotionHistoryView: View {
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \EmotionRecord.timestamp, ascending: true)]) var emotionRecords: FetchedResults<EmotionRecord>
     var body: some View {
         List(emotionRecords) { record in
-            VStack {
+            ScrollView {
+                ZStack {
+                    Capsule()
                 HStack {
                     Text("\(record.name ?? "-")")
                     Spacer()
@@ -23,6 +25,7 @@ struct EmotionHistoryView: View {
                 }
                 HStack {
                     Text("\(record.note ?? "-")")
+                }
                 }
             }
         }

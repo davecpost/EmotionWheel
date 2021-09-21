@@ -11,7 +11,6 @@
 		7D99EAC026E67E800082B398 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99EABF26E67E800082B398 /* ContentView.swift */; };
 		7D99EAC226E67E850082B398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D99EAC126E67E850082B398 /* Assets.xcassets */; };
 		7D99EAC526E67E850082B398 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D99EAC426E67E850082B398 /* Preview Assets.xcassets */; };
-		7D99EAD026E67E860082B398 /* EmotionWheelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99EACF26E67E860082B398 /* EmotionWheelTests.swift */; };
 		7D99EADB26E67E860082B398 /* EmotionWheelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99EADA26E67E860082B398 /* EmotionWheelUITests.swift */; };
 		7D99EAE926E67EB90082B398 /* SegmentedWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99EAE826E67EB90082B398 /* SegmentedWheel.swift */; };
 		7D99EAEB26E68C7E0082B398 /* CircleSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99EAEA26E68C7E0082B398 /* CircleSegment.swift */; };
@@ -25,6 +24,7 @@
 		7D99F13C26F50AA60082B398 /* EmotionsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F13A26F50AA60082B398 /* EmotionsModel.xcdatamodeld */; };
 		7D99F13E26F50ACD0082B398 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F13D26F50ACD0082B398 /* CoreDataStack.swift */; };
 		7D99F14426F50F310082B398 /* EmotionRecordExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F14326F50F310082B398 /* EmotionRecordExtension.swift */; };
+		7DBCEB8226FA44BB003FBDD5 /* EmotionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBCEB8126FA44BB003FBDD5 /* EmotionsTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,6 @@
 		7D99EAC426E67E850082B398 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7D99EAC626E67E850082B398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D99EACB26E67E860082B398 /* EmotionWheelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotionWheelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D99EACF26E67E860082B398 /* EmotionWheelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionWheelTests.swift; sourceTree = "<group>"; };
 		7D99EAD126E67E860082B398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D99EAD626E67E860082B398 /* EmotionWheelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotionWheelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D99EADA26E67E860082B398 /* EmotionWheelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionWheelUITests.swift; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		7D99F13B26F50AA60082B398 /* EmotionsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmotionsModel.xcdatamodel; sourceTree = "<group>"; };
 		7D99F13D26F50ACD0082B398 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		7D99F14326F50F310082B398 /* EmotionRecordExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionRecordExtension.swift; sourceTree = "<group>"; };
+		7DBCEB8126FA44BB003FBDD5 /* EmotionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +141,8 @@
 		7D99EACE26E67E860082B398 /* EmotionWheelTests */ = {
 			isa = PBXGroup;
 			children = (
-				7D99EACF26E67E860082B398 /* EmotionWheelTests.swift */,
 				7D99EAD126E67E860082B398 /* Info.plist */,
+				7DBCEB8126FA44BB003FBDD5 /* EmotionsTest.swift */,
 			);
 			path = EmotionWheelTests;
 			sourceTree = "<group>";
@@ -356,7 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D99EAD026E67E860082B398 /* EmotionWheelTests.swift in Sources */,
+				7DBCEB8226FA44BB003FBDD5 /* EmotionsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
