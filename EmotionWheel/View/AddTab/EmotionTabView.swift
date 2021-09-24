@@ -11,7 +11,6 @@ struct EmotionTabView: View {
     var body: some View {
         NavigationView {
             EmotionListView(emotions: Emotion.emotions)
-                .navigationTitle("Emotions")
         }
     }
 }
