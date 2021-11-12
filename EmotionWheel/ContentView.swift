@@ -15,7 +15,7 @@ struct ContentView: View {
                     Image(systemName: "plus")
                     Text("Add")
                 }
-            EmotionHistoryView()
+            EmotionHistoryListView()
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("History")

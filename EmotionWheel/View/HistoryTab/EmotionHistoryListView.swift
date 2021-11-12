@@ -9,24 +9,10 @@ import SwiftUI
 
 struct EmotionHistoryListView: View {
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \EmotionRecord.timestamp, ascending: true)]) private var emotionRecords: FetchedResults<EmotionRecord>
-    let animation: Namespace.ID
-    @Binding var selectedRecord: EmotionRecord!
-    @Binding var showDetail: Bool
     var body: some View {
-        List(emotionRecords) { record in
-            ScrollView {
-                ZStack {
-                    Capsule()
-                        .fill(Emotion.getColor(for: record.name))
-                        .matchedGeometryEffect(id: record.id, in: animation)
-                        .onTapGesture {
-                            selectedRecord = record
-                            withAnimation {
-                                showDetail.toggle()
-                            }
-                        }
-                    Text("\(record.name ?? "-")").padding()
-                }
+        ScrollView {
+            ForEach(emotionRecords) { record in
+                EmotionHistoryListRowView(record: record)
             }
         }
     }
@@ -34,6 +20,6 @@ struct EmotionHistoryListView: View {
 
 struct EmotionHistoryListView_Previews: PreviewProvider {
     static var previews: some View {
-        EmotionHistoryView().environment(\.managedObjectContext, CoreDataStack.preview.managedObjectContext)
+        EmotionHistoryListView().environment(\.managedObjectContext, CoreDataStack.preview.managedObjectContext)
     }
 }
